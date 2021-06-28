@@ -3,8 +3,7 @@ def CONTAINER_TAG="latest"
 def DOCKER_HUB_USER="debasis4"
 def HTTP_PORT="8090"
 
-pipeline {
-  agent 'any'
+node {
     stage('Initialize'){
         def dockerHome = tool 'myDocker'
         def mavenHome  = tool 'myMaven'
